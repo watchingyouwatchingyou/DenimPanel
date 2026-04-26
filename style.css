@@ -1,0 +1,233 @@
+body {
+  margin: 0;
+  height: 100dvh;
+  font-family: Times New Roman, Candara, 'Noto Sans', source-sans-pro, sans-serif;  
+  font-style: classic;
+  font-size: 17px;
+}
+* {
+  box-sizing: border-box;
+}
+
+.box {
+  display: inline-block;
+  width: fit-content;
+  height: fit-content;
+  background: transparent;
+  color: black;
+}
+
+#a1 {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  color:black;
+}
+#b1 {
+  position: absolute;
+  top: 175px;
+  left: 600px;
+  background: white;
+  color: black;
+}
+#c1 {
+  position: absolute;
+  top: 700px;
+  left: 600px;
+  background: white;
+  color: black;
+}
+#d1 {
+  position: absolute;
+  top: -1600px;
+  left: -1000px;
+  background: white;
+  color:black;
+  scale: .19;
+}
+#e1 {
+  position: absolute;
+  top: 200px;
+  left: 600px;
+  background: white;
+  color: black;
+}
+
+#a2 {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  color:black;
+}
+#b2 {
+  position: absolute;
+  top: 200px;
+    left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  color: black;
+}
+#c2 {
+  position: absolute;
+  top: 700px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  color: black;
+}
+
+#a3 {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  background: white;
+  color:black;
+}
+#b3 {
+  position: absolute;
+  top: 450px;
+  left: 40px;
+  background: white;
+  color: black;
+}
+#c3 {
+  position: absolute;
+  top: 500px;
+  left: 40px;
+  background: white;
+  color: black;
+}
+
+#a4 {
+  position: absolute;
+  top: 40px;
+  left: 150px;
+  background: white;
+  color:black;
+}
+#b4 {
+  position: absolute;
+  top: 400px;
+  left: 150px;
+  background: white;
+  color: black;
+}
+#c4 {
+  position: absolute;
+  top: 500px;
+  left: 150px;
+  background: white;
+  color: black;
+}
+
+#a5 {
+  position: absolute;
+  top: 40px;
+  left: 150px;
+  background: white;
+  color:black;
+}
+#b5 {
+  position: absolute;
+  top: 400px;
+  left: 150px;
+  background: white;
+  color: black;
+}
+#c5 {
+  position: absolute;
+  top: 500px;
+  left: 150px;
+  background: white;
+  color: black;
+}
+
+#a6 {
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  background: white;
+  color:black;
+}
+#b6 {
+  position: absolute;
+  top: 400px;
+  left: 150px;
+  background: white;
+  color: black;
+}
+#c6 {
+  position: absolute;
+  top: 500px;
+  left: 150px;
+  background: white;
+  color: black;
+}
+
+#aq {
+  position: absolute;
+  top: 40px;
+  left: 150px;
+  background: white;
+  color: black;
+}
+#as1 {
+  position: absolute;
+  top: 40px;
+  left: 150px;
+  background: white;
+  color: black;
+}
+#bs1 {
+  position: absolute;
+  top: 500px;
+  left: 500px;
+  background: white;
+  color: black;
+}
+#userInput {
+ position: absolute;
+  width: 900px;
+  height: 100px;
+  top: 20px;
+  left: 500px;
+  background: white;
+  color: black;
+  opacity: 1;
+  border: transparent;
+  font-family: inherit;
+  font-size: inherit;
+}
+  
+  #userInput:focus {
+  border-color: transparent;
+  background: transparent;
+  outline: none;
+  color:#000000;
+  opacity: 1;
+}
+
+#response {
+   position: absolute;
+  width: 250px;
+  height: 100px;
+  top: 150px;
+  left: 500px;
+  color: black; 
+  opacity: 1;  
+}
+::placeholder {
+  color: black;
+  opacity: 1;
+}
+
+/* Unvisited link */
+a:link { color: black; text-decoration:none;}
+/* Visited link */
+a:visited { color: black; }
+/* Hovering over link */
+a:hover { text-decoration:none;}

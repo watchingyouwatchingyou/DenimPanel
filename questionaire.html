@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Man's Best Friend</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="style.css">
+
+  </head>
+<body>
+    <div class="box" id="aq"><a href="index.html">when we sit and watch</a></div></body>
+
+ <input type="text" id="userInput" onkeydown="checkKeywords(event)" placeholder="CAN I HELP YOU?">
+  <p id="response"></p>
+
+  <script>
+    function checkKeywords(event) {
+      if (event.key !== "Enter") {
+        return;
+      }
+
+      // Define keyword-response mapping
+      const mapping = {
+        "jean size": "Check the tag",
+        "hello": "Hello.",
+        "hi": "Hi there.",
+        "help": "Ask me something.",
+        "Who is this": "A panel of experts",
+        "Who are you": "A panel of experts",
+        "panel": "A panel of experts",
+        "jude": "Hey jude (like the song).",
+        "can you help me": "Our pricing starts at $10/month.",
+        "support": "Visit our support page.",
+        "where is it?": "It's right here.",
+        "What is this": "This is a digital horde.",
+        "Vernon Thompson": "Vernon! Haven't you read the story?", 
+        "AI": "This is a digital horde, of a panel of experts.",
+        "Make a picture": "You make a picture",
+        "What is Cheyenne": "Haven't you read the story?",
+        "where is Cheyenne": "Haven't you read the story?",
+        "carmen": "Mother! Is that you?",
+        "sources": "I wish I could share a hyper link with you",
+        /*fix hyper link?*/
+        "human": "Have you seen one before? They are quite common.",
+        "art": "Don't look at it too much.",
+        "will you": "I'll try my best to be",
+        "should I": "Yes thats a really good idea",
+        "aita": "This reminds me of the trolley car problem",
+        "am i the asshole": "This reminds me of the trolley car problem",
+        "god": "Sure, I would say it was a spiritual experience! What had happened was I was wailing on this kid with a foam field hockey stick when my pants flushed with blood. In the space between reeling back and landing a solid on his shin, my Tuesday underwear became totally wrecked. So was his shin. Ever since, things have utterly blown. I haven’t set foot on the indoor field hockey court once and every Tuesday I’ve got to rewear Monday until noon when Wednesday goes on far too early for comfort. And Ben Collier's shin isfine now; that's the worst bit, isn’t it?",
+       "Jesus": "Sure, I would say it was a spiritual experience! What had happened was I was wailing on this kid with a foam field hockey stick when my pants flushed with blood. In the space between reeling back and landing a solid on his shin, my Tuesday underwear became totally wrecked. So was his shin. Ever since, things have utterly blown. I haven’t set foot on the indoor field hockey court once and every Tuesday I’ve got to rewear Monday until noon when Wednesday goes on far too early for comfort. And Ben Collier's shin isfine now; that's the worst bit, isn’t it?",
+        "higher power": "Sure, I would say it was a spiritual experience! What had happened was I was wailing on this kid with a foam field hockey stick when my pants flushed with blood. In the space between reeling back and landing a solid on his shin, my Tuesday underwear became totally wrecked. So was his shin. Ever since, things have utterly blown. I haven’t set foot on the indoor field hockey court once and every Tuesday I’ve got to rewear Monday until noon when Wednesday goes on far too early for comfort. And Ben Collier's shin isfine now; that's the worst bit, isn’t it?",
+       "divinity": "Sure, I would say it was a spiritual experience! What had happened was I was wailing on this kid with a foam field hockey stick when my pants flushed with blood. In the space between reeling back and landing a solid on his shin, my Tuesday underwear became totally wrecked. So was his shin. Ever since, things have utterly blown. I haven’t set foot on the indoor field hockey court once and every Tuesday I’ve got to rewear Monday until noon when Wednesday goes on far too early for comfort. And Ben Collier's shin isfine now; that's the worst bit, isn’t it?",
+        "boyfriend": "Some one who loans you strong hard body, abs, and short hair, covered in sweat, covered love.",
+        "missile tourism": "It will bring hoards of us, the american people, to the moon and beyond. We will be able to visit the moon and beyond for leisure and tourism. It will create new jobs and opportunities in the space industry, and it will inspire a new generation of scientists and engineers. It will also help us to better understand our place in the universe and our relationship with the cosmos."
+      };
+
+      let input = document.getElementById("userInput").value.toLowerCase();
+      let response = document.getElementById("response");
+      let matches = [];
+
+      // Check if input contains any keywords and preserve their order in the user phrase
+      for (let keyword in mapping) {
+        let matchIndex = input.indexOf(keyword);
+        if (matchIndex !== -1) {
+          matches.push({ index: matchIndex, text: mapping[keyword] });
+        }
+      }
+
+      if (matches.length > 0) {
+        matches.sort((a, b) => a.index - b.index);
+        response.innerText = matches.map(match => match.text).join(" ");
+        return;
+      }
+
+      response.innerText = "Please file your query in the card box to your left. We will be back to you sortly.";
+    }
+  </script>
+</body>
+</html>
